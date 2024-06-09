@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="campagne-detail">
+    <div class="campagne">
+        <img src="{{ campagne.thumbnail.url}}">
+        <h2>{{ campagne.nom }}</h2>
+        <p>{{ campagne.charity_number }}</p>
+        <p>{{ campagne.histoire }}</p>
+        <p>{{ campagne.montant }}</p>
+        <p>{{ campagne.supporteurs }}</p>
+        <form method="POST">
+            <button type="submit" class="donate"><a href="https://buy.stripe.com/test_14k5nv89M03xamAcMM">Donate</a></button>
+        </form>
+    </div>
+</div>
+{% endblock %}
